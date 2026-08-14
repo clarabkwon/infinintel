@@ -1,0 +1,390 @@
+:root {
+  color-scheme: dark;
+  --bg: #0a1628;
+  --bg-elevated: #12233b;
+  --panel: #152a45;
+  --panel-border: rgba(255, 255, 255, 0.1);
+  --text: #f5f8fc;
+  --muted: #9eb4cf;
+  --accent: #f18a2a;
+  --accent-strong: #d97314;
+  --danger: #e85d5d;
+  --success: #3ecf8e;
+  --info: #5b9fd4;
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
+  font-family: "Verdana", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.45;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(241, 138, 42, 0.14), transparent 42%),
+    radial-gradient(circle at top right, rgba(37, 99, 175, 0.26), transparent 40%),
+    var(--bg);
+  color: var(--text);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 1.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.app-title {
+  text-align: center;
+  width: 100%;
+}
+
+.app-description {
+  text-align: center;
+  width: 100%;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  margin: 0 auto;
+  color: var(--muted);
+  max-width: 42rem;
+}
+
+.sidebar-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  min-width: 240px;
+  box-shadow: var(--shadow);
+}
+
+.sidebar-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(62, 207, 142, 0.15);
+  color: var(--success);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+}
+
+.endpoint-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.endpoint-list code {
+  color: var(--text);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  border: 1px solid var(--panel-border);
+  background: transparent;
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+}
+
+.tab-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #1a1005;
+  font-weight: 600;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 20px;
+  padding: 1.35rem;
+  box-shadow: var(--shadow);
+}
+
+.panel h2 {
+  margin: 0 0 0.35rem;
+}
+
+.panel .subtitle {
+  margin: 0 0 1.25rem;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 900px) {
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.section h3 {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.field input,
+.field select {
+  border: 1px solid var(--panel-border);
+  background: #101d2d;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.55rem 0.7rem;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.primary-btn {
+  border: none;
+  background: var(--accent);
+  color: #1a1005;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: 0.7rem 1.15rem;
+  cursor: pointer;
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primary-btn:hover:not(:disabled) {
+  background: var(--accent-strong);
+}
+
+.result {
+  margin-top: 1rem;
+  border-radius: 14px;
+  padding: 1rem;
+  border: 1px solid var(--panel-border);
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.result.high {
+  border-color: rgba(232, 93, 93, 0.5);
+}
+
+.result.low {
+  border-color: rgba(62, 207, 142, 0.45);
+}
+
+.result.info {
+  border-color: rgba(91, 159, 212, 0.45);
+}
+
+.metric {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.result-message {
+  margin: 0;
+}
+
+.result-message.high {
+  color: var(--danger);
+}
+
+.result-message.low {
+  color: var(--success);
+}
+
+.result-message.info {
+  color: var(--info);
+}
+
+.error-banner {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(232, 93, 93, 0.12);
+  color: #ffb4b4;
+  border: 1px solid rgba(232, 93, 93, 0.35);
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.muted-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.lookup-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+}
+
+.lookup-field {
+  flex: 1 1 220px;
+  margin-bottom: 0;
+}
+
+.lookup-results {
+  margin-top: 1.25rem;
+}
+
+.lookup-results h3 {
+  margin: 0 0 0.85rem;
+}
+
+.metric-grid,
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.metric-tile {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metric-tile span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.metric-tile strong {
+  font-size: 1.05rem;
+}
+
+.nested-tabs {
+  margin: 0.5rem 0 1rem;
+}
+
+.empty-note {
+  color: var(--muted);
+  margin: 0.5rem 0 0;
+}
+
+.caption {
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.customer-story {
+  margin: 0 0 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(241, 138, 42, 0.35);
+  background: rgba(241, 138, 42, 0.08);
+}
+
+.customer-story p {
+  margin: 0.35rem 0 0;
+  color: var(--text);
+  line-height: 1.55;
+}
