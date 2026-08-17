@@ -1,4 +1,4 @@
-# Risk & Propensity Models
+# InfinIntel
 
 Full-stack Databricks App with **customer lookup** (Unity Catalog + SQL warehouse) plus live scoring for **churn**, **deposit propensity**, and **fraud** via Model Serving.
 
