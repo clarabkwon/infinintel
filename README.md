@@ -2,6 +2,12 @@
 
 Full-stack Databricks App with **customer lookup** (Unity Catalog + SQL warehouse) plus live scoring for **churn**, **deposit propensity**, and **fraud** via Model Serving.
 
+# Demo
+
+
+https://github.com/user-attachments/assets/86e09ebd-6821-43d5-9e0e-9362b563fc3a
+
+
 ## Stack
 
 - **Frontend:** React + TypeScript + Vite
